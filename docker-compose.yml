@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  # NodeJS Service
+  nodejs:
+    container_name: nodejs
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+      #dockerfile: ./Dockerfile
+    ports:
+      ## Access from any interfaces 
+      - "0.0.0.0:${EXTERNAL_PORT:-5000}:5000"
+    volumes:
+      ## Mount read-only (:ro) or read-write (:rw) sources directory
+      - ./src:/usr/src/app:rw
+      - /usr/src/app/node_modules
+    #
+    networks:
+      ## Connect to Classic Public-accessible Docker Network
+      - dockernet
+    #
+    restart: unless-stopped
+
+## Classic Public-accessible Docker Network - All Container has access from outside
+networks:
+  dockernet:
