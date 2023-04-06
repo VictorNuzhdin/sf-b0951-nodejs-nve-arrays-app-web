@@ -116,7 +116,7 @@ $ docker-compose up
 Screen#1: Initial "Hello World" page (from v1.0.0)
 ![screen](_screens/01_index-page_helloWorld.png?raw=true)
 
-Screen#2: Sample CSV data from "sampleDataCSV.csv" file
+Screen#2: Sample CSV data from "sampleDataCSV.csv" file<br>
 ![screen](_screens/02_sampleCSVdata.png?raw=true)
 
 Screen#3: Input form
