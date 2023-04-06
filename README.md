@@ -1,4 +1,4 @@
-# sf-task951-nodejs-nve-arrays-app
+# sf-task951-nodejs-nve-arrays-app-web
 For Skill Factory study project (B9, Task B9.5.1) (nodejs webapp)
 
 <br>
@@ -6,58 +6,32 @@ For Skill Factory study project (B9, Task B9.5.1) (nodejs webapp)
 ### 00. Dependencies
 
 * "express" ([npm_repo](https://www.npmjs.com/package/express))
+* "mustache-express" ([npm_repo](https://www.npmjs.com/package/mustache-express))
 * "nodemon" ([npm_repo](https://www.npmjs.com/package/nodemon))
+* "csvtojson" ([npm_repo](https://www.npmjs.com/package/csvtojson))
+* "nve-arrays" ([npm_repo](https://www.npmjs.com/package/nve-arrays), [github_repo](https://github.com/VictorNuzhdin/sf-task951-nodejs-nve-arrays-package))
 
 ### 01. Install Dependencies from package.json
 
 ```bash
 $ npm install
-$ npm list --depth=1
+
+or manually
+
+$ npm install express
+$ npm install mustache-express
+$ npm install nodemon
+$ npm install csvtojson
+$ npm install nve-arrays
+
+$ npm list
 
 =OUTPUT:
-├─┬ express@4.18.2
-│ ├── accepts@1.3.8
-│ ├── array-flatten@1.1.1
-│ ├── body-parser@1.20.1
-│ ├── content-disposition@0.5.4
-│ ├── content-type@1.0.5
-│ ├── cookie-signature@1.0.6
-│ ├── cookie@0.5.0
-│ ├── debug@2.6.9
-│ ├── depd@2.0.0
-│ ├── encodeurl@1.0.2
-│ ├── escape-html@1.0.3
-│ ├── etag@1.8.1
-│ ├── finalhandler@1.2.0
-│ ├── fresh@0.5.2
-│ ├── http-errors@2.0.0
-│ ├── merge-descriptors@1.0.1
-│ ├── methods@1.1.2
-│ ├── on-finished@2.4.1
-│ ├── parseurl@1.3.3
-│ ├── path-to-regexp@0.1.7
-│ ├── proxy-addr@2.0.7
-│ ├── qs@6.11.0
-│ ├── range-parser@1.2.1
-│ ├── safe-buffer@5.2.1
-│ ├── send@0.18.0
-│ ├── serve-static@1.15.0
-│ ├── setprototypeof@1.2.0
-│ ├── statuses@2.0.1
-│ ├── type-is@1.6.18
-│ ├── utils-merge@1.0.1
-│ └── vary@1.1.2
-└─┬ nodemon@2.0.22
-  ├── chokidar@3.5.3
-  ├── debug@3.2.7
-  ├── ignore-by-default@1.0.1
-  ├── minimatch@3.1.2
-  ├── pstree.remy@1.1.8
-  ├── semver@5.7.1
-  ├── simple-update-notifier@1.1.0
-  ├── supports-color@5.5.0
-  ├── touch@3.1.0
-  └── undefsafe@2.0.5
+├── csvtojson@2.0.10
+├── express@4.18.2
+├── mustache-express@1.3.2
+├── nodemon@2.0.22
+└── nve-arrays@1.0.0
 ```
 
 ### 02. Run
@@ -139,5 +113,14 @@ $ docker-compose up
 
 ### 05. Output/Preview: http://your_node_host_ip:5000
 
-Screen#1: Initial "Hello World" page
+Screen#1: Initial "Hello World" page (from v1.0.0)
 ![screen](_screens/01_index-page_helloWorld.png?raw=true)
+
+Screen#2: Sample CSV data from "sampleDataCSV.csv" file
+![screen](_screens/02_sampleCSVdata.png?raw=true)
+
+Screen#3: Input form
+![screen](_screens/03_inputForm.png?raw=true)
+
+Screen#4: Final result
+![screen](_screens/04_outputResult.png?raw=true)

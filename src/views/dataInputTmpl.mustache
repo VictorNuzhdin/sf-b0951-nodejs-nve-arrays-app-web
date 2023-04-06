@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello from NodeJS App (CSV & JSON Processing)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NodeJS WebApp">
+    <meta http-equiv="refresh" content="15">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+         textarea {
+            max-width:100%; 
+            font-size: 14px; 
+            resize: none;
+            border: 1px solid #eee;
+            color: rgb(192,0,0);
+         }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" style="padding:20px">
+      <div class="card card-body bg-light">
+        <h2>{{pageTitle}}</h2>
+        <br/>
+        <!--CSV Input Form-->
+        <span>*тестовые данные автоматически загружаются из&nbsp;<a href="https://www.convertcsv.com/csv-viewer-editor.htm" target="_blank">валидного (RFC 4180)</a><span>&nbsp;</span>CSV файла "sampleDataCSV.csv"</span>
+        <textarea readonly id="dataSampleCSV" name="dataSampleCSV" cols="170" rows="10" class="text">{{sampleDataCsvString}}</textarea><br/>
+        
+        <span>*и преобразуются в&nbsp;<a href="https://jsonformatter.curiousconcept.com" target="_blank">валидный (RFC 8259)</a><span>&nbsp;</span>JSON массив объектов который передается дальше в обработку</span>
+        <textarea readonly id="dataCSV" name="dataCSV" form="confirmationForm" cols="170" rows="10" class="text">{{sampleDataJsonString}}</textarea><br/>
+
+        <form id="confirmationForm" name="confirmationForm"
+              method="post" 
+              action="/submitDataCSV">
+              <input type="submit" value="Обработать" class="btn btn-primary">
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

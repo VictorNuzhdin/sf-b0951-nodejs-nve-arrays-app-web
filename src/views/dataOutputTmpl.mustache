@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+         textarea {
+            max-width:100%; 
+            font-size: 14px; 
+            resize: none;
+            border: 1px solid #eee;
+            color: rgb(192,0,0);
+         }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="padding:20px">
+      <div class="card card-body bg-light">
+        <h2>{{pageTitle1}}<br/>{{pageTitle2}}</h2>
+        <br/>
+        <span>*результатом является&nbsp;<a href="https://jsonformatter.curiousconcept.com" target="_blank">валидная (RFC 8259)</a><span>&nbsp;</span>JSON структура - статистика по исходным данным</span>
+        <span>*полученная путем загрузки CSV файла "sampleDataCSV.csv", формирования на его основе массива объектов класса Employee</span>
+        <span>*и обработки этого массива с помощью метода getStatFromListObjectsJSON() входящего в NMP пакет "nve-arrays"</span>
+        <textarea readonly id="dataCSV" name="dataCSV" form="confirmationForm" cols="170" rows="10" class="text">{{dataCSV}}</textarea><br/>
+
+      </div>
+     </div>
+   </body>
+</html>

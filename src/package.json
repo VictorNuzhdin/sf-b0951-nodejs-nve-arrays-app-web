@@ -25,7 +25,10 @@
     "helloworld"
   ],
   "dependencies": {
-    "express": "^4.17.2"
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.2",
+    "mustache-express": "^1.3.2",
+    "nve-arrays": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
